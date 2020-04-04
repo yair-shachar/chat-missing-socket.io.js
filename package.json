@@ -2,7 +2,7 @@
   "name": "chatapp-u",
   "version": "1.0.0",
   "description": "Chat app, useing Node.js, ExpressJs and Socket.io",
-  "main": "server.js",
+  "main": "bin/www",
   "scripts": {
     "start": "nodemon server.js"
   },
