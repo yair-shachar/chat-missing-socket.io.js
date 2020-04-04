@@ -1,5 +1,5 @@
 var server = require('./server');
-var io          = require('socket.io')(server);
+var io = require('socket.io')(server);
 
 // Optinal!
 // you may attach socket io to redis, so redis will manage socket io through multiple nodes
