@@ -1,0 +1,23 @@
+var app = require('../app/app');
+var server = require('../app/server');
+var Io = require('../app/socket.io.js');
+
+app.get('/', function(req, res) {
+    res.sendFile(__dirname + '/index.html');
+});
+
+app.get('/css/index.css', function(req, res) {
+    res.sendFile(__dirname + '/css/index.css');
+});
+
+Io.on('connection', function (socket) {
+    console.log('User has connected!');
+
+    socket.on('disconnect', function() {
+        console.log('User has disconnected')
+    });
+});
+
+server.listen(3003, function() { 
+    console.log('The development server is running at port 3003');
+});
